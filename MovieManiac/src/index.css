@@ -1,11 +1,12 @@
-
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+html {
+  scroll-behavior: smooth;
+}
+body {
   background-color: #101010;
   color: #fff;
 }

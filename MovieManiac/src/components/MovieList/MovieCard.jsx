@@ -1,9 +1,13 @@
 import React from "react";
 import "./MovieCard.css";
 import star from "../../assets/glowingstar.png";
-const MovieCard = ({movie}) => {
+const MovieCard = ({ movie }) => {
   return (
-    <a href="" className="movie_card">
+    <a
+      href={`https://www.themoviedb.org/movie/${movie.id}`}
+      className="movie_card"
+      target="_blank"
+    >
       {" "}
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -15,13 +19,11 @@ const MovieCard = ({movie}) => {
         <div className="movie_date_rate">
           <p>{movie.release_date}</p>
           <p>
-            {movie.rate_average}{" "} <img className="card_emoji" src={star} alt="" />
+            {movie.vote_average}{" "}
+            <img className="card_emoji" src={star} alt="" />
           </p>
         </div>
-        <p className="movie_description">
-          {movie.overview}
-          {" "}
-        </p>
+        <p className="movie_description">{movie.overview} </p>
       </div>
     </a>
   );
